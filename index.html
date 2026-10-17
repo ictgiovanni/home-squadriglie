@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Squadriglie Automazione</title>
+<style>
+:root{
+  --notte:#0C1542; --notte2:#18245E; --ambra:#E8A01E; --inchiostro:#141E5C; --grigio:#5A6A81;
+  --linea:#D6DDE8; --chiaro:#F4F6FA; --bianco:#FFFFFF;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bianco);color:var(--inchiostro);font-family:'Segoe UI',Roboto,Arial,sans-serif;line-height:1.55}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+nav{position:sticky;top:0;z-index:5;background:var(--notte);border-bottom:1px solid var(--notte2)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:64px}
+nav .nome{color:var(--bianco);font-weight:700;font-size:17px;margin-right:auto}
+nav a{color:#C9D2E6;text-decoration:none;font-size:15px;font-weight:600;padding:6px 4px;border-bottom:2px solid transparent}
+nav a:hover{color:var(--bianco);border-bottom-color:var(--ambra)}
+
+header{background:radial-gradient(circle at 78% 40%,#1D2A6B 0,var(--notte) 55%);color:var(--bianco)}
+header .wrap{display:grid;grid-template-columns:1.4fr 1fr;align-items:center;gap:32px;padding-top:56px;padding-bottom:56px}
+.kicker{color:var(--ambra);font-weight:700;letter-spacing:.08em;font-size:13px;text-transform:uppercase;margin:0 0 10px}
+h1{font-size:52px;line-height:1.05;margin:0 0 14px}
+.intro{font-size:19px;color:#C9D2E6;margin:0 0 26px;max-width:560px}
+.numeri{display:flex;gap:28px;flex-wrap:wrap}
+.numeri b{display:block;font-size:34px;color:var(--ambra);line-height:1.1}
+.numeri span{color:#C9D2E6;font-size:14px}
+header .scuola{justify-self:center;background:var(--bianco);border-radius:14px;padding:22px 26px;max-width:340px;width:100%}
+header .scuola img{width:100%;display:block}
+
+section{padding:48px 0;border-top:1px solid var(--linea)}
+section:nth-of-type(even){background:var(--chiaro)}
+.testa{display:flex;align-items:center;gap:18px;margin-bottom:26px}
+.classe{background:var(--c);color:var(--bianco);font-weight:800;font-size:22px;padding:14px 18px;border-radius:12px;letter-spacing:.04em}
+h2{font-size:30px;margin:0}
+.sotto{color:var(--grigio);margin:0;font-size:16px}
+
+.griglia{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px}
+.card{display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--bianco);border:1px solid var(--linea);
+  border-top:5px solid var(--c);border-radius:12px;padding:20px 16px 16px;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(12,21,66,.14)}
+.card img{width:150px;height:150px;object-fit:contain;margin-bottom:10px}
+.segnaposto{width:150px;height:150px;margin-bottom:10px;border-radius:50%;border:3px dashed var(--c);color:var(--c);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:56px;font-weight:800;line-height:1}
+.segnaposto small{font-size:12px;font-weight:600;color:var(--grigio);margin-top:6px}
+.card h3{margin:0 0 2px;font-size:20px}
+.prog{margin:0 0 2px;color:var(--c);font-weight:700;font-size:14px}
+.membri{margin:0 0 10px;color:var(--grigio);font-size:14px}
+.vai{margin-top:auto;max-width:100%;font-size:11px;color:var(--grigio);font-family:Consolas,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+footer{background:var(--notte);color:#C9D2E6;font-size:14px}
+footer .wrap{padding-top:26px;padding-bottom:26px}
+
+@media (max-width:760px){
+  header .wrap{grid-template-columns:1fr}
+  header .scuola{max-width:240px;order:-1}
+  h1{font-size:38px}
+  nav .wrap{gap:10px} nav .nome{font-size:15px}
+  .testa .classe{font-size:18px;padding:10px 14px}
+  h2{font-size:24px}
+  .griglia{grid-template-columns:repeat(2,1fr);gap:12px}
+  .card img,.segnaposto{width:110px;height:110px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <span class="nome">Squadriglie Automazione</span>
+    <a href="#1ataq">1ATAQ</a><a href="#3ata">3ATA</a><a href="#4ata">4ATA</a><a href="#5ata">5ATA</a>
+  </div>
+</nav>
+
+<header>
+  <div class="wrap">
+    <div>
+      <p class="kicker">ITI "G. Bosco Lucarelli" · Benevento · Indirizzo Automazione</p>
+      <h1>Le nostre<br>squadriglie</h1>
+      <p class="intro">Ogni squadriglia ha il suo sito: progetti, prove, errori e successi raccontati dagli studenti. Scegli una classe e clicca su un logo.</p>
+      <div class="numeri">
+        <div><b>4</b><span>classi</span></div>
+        <div><b>20</b><span>squadriglie</span></div>
+        <div><b>68</b><span>studenti</span></div>
+      </div>
+    </div>
+    <div class="scuola"><img src="logo_scuola.png" alt="Logo ITI G. Bosco Lucarelli"></div>
+  </div>
+</header>
+
+<section id="1ataq" style="--c:#1EA07A">
+  <div class="wrap">
+    <div class="testa"><span class="classe">1ATAQ</span><div><h2>Classe 1ATAQ</h2>
+    <p class="sotto">Primo anno: si comincia · 4 squadriglie</p></div></div>
+    <div class="griglia"><a class="card" href="https://www.1ataq-coniglio.ata-lucarelli.it" style="--c:#1EA07A"><img src="loghi/1ataq-coniglio.png" alt="Logo della squadriglia Coniglio"><h3>Coniglio</h3><p class="membri">2 componenti</p><span class="vai">www.1ataq-coniglio.ata-lucarelli.it →</span></a><a class="card" href="https://www.1ataq-lepre.ata-lucarelli.it" style="--c:#1EA07A"><img src="loghi/1ataq-lepre.png" alt="Logo della squadriglia Lepre"><h3>Lepre</h3><p class="membri">2 componenti</p><span class="vai">www.1ataq-lepre.ata-lucarelli.it →</span></a><a class="card" href="https://www.1ataq-lupo.ata-lucarelli.it" style="--c:#1EA07A"><img src="loghi/1ataq-lupo.png" alt="Logo della squadriglia Lupo"><h3>Lupo</h3><p class="membri">2 componenti</p><span class="vai">www.1ataq-lupo.ata-lucarelli.it →</span></a><a class="card" href="https://www.1ataq-tartaruga.ata-lucarelli.it" style="--c:#1EA07A"><img src="loghi/1ataq-tartaruga.png" alt="Logo della squadriglia Tartaruga"><h3>Tartaruga</h3><p class="membri">2 componenti</p><span class="vai">www.1ataq-tartaruga.ata-lucarelli.it →</span></a></div>
+  </div>
+</section>
+<section id="3ata" style="--c:#1C6FD0">
+  <div class="wrap">
+    <div class="testa"><span class="classe">3ATA</span><div><h2>Classe 3ATA</h2>
+    <p class="sotto">Primo anno di indirizzo · 6 squadriglie</p></div></div>
+    <div class="griglia"><a class="card" href="https://www.3ata-giaguari.ata-lucarelli.it" style="--c:#1C6FD0"><img src="loghi/3ata-giaguari.png" alt="Logo della squadriglia Giaguari"><h3>Giaguari</h3><p class="membri">4 componenti</p><span class="vai">www.3ata-giaguari.ata-lucarelli.it →</span></a><a class="card" href="https://www.3ata-gufi.ata-lucarelli.it" style="--c:#1C6FD0"><img src="loghi/3ata-gufi.png" alt="Logo della squadriglia Gufi"><h3>Gufi</h3><p class="membri">4 componenti</p><span class="vai">www.3ata-gufi.ata-lucarelli.it →</span></a><a class="card" href="https://www.3ata-mamba.ata-lucarelli.it" style="--c:#1C6FD0"><img src="loghi/3ata-mamba.png" alt="Logo della squadriglia Mamba"><h3>Mamba</h3><p class="membri">5 componenti</p><span class="vai">www.3ata-mamba.ata-lucarelli.it →</span></a><a class="card" href="https://www.3ata-pantera.ata-lucarelli.it" style="--c:#1C6FD0"><img src="loghi/3ata-pantera.png" alt="Logo della squadriglia Pantera"><h3>Pantera</h3><p class="membri">4 componenti</p><span class="vai">www.3ata-pantera.ata-lucarelli.it →</span></a><a class="card" href="https://www.3ata-pegasus.ata-lucarelli.it" style="--c:#1C6FD0"><img src="loghi/3ata-pegasus.png" alt="Logo della squadriglia Pegasus"><h3>Pegasus</h3><p class="membri">4 componenti</p><span class="vai">www.3ata-pegasus.ata-lucarelli.it →</span></a><a class="card" href="https://www.3ata-tigri.ata-lucarelli.it" style="--c:#1C6FD0"><img src="loghi/3ata-tigri.png" alt="Logo della squadriglia Tigri"><h3>Tigri</h3><p class="membri">5 componenti</p><span class="vai">www.3ata-tigri.ata-lucarelli.it →</span></a></div>
+  </div>
+</section>
+<section id="4ata" style="--c:#E8A01E">
+  <div class="wrap">
+    <div class="testa"><span class="classe">4ATA</span><div><h2>Classe 4ATA</h2>
+    <p class="sotto">Secondo anno di indirizzo · 4 squadriglie</p></div></div>
+    <div class="griglia"><a class="card" href="https://www.4ata-armadillo.ata-lucarelli.it" style="--c:#E8A01E"><img src="loghi/4ata-armadillo.png" alt="Logo della squadriglia Armadillo"><h3>Armadillo</h3><p class="membri">3 componenti</p><span class="vai">www.4ata-armadillo.ata-lucarelli.it →</span></a><a class="card" href="https://www.4ata-leoni.ata-lucarelli.it" style="--c:#E8A01E"><img src="loghi/4ata-leoni.png" alt="Logo della squadriglia Leone"><h3>Leone</h3><p class="membri">3 componenti</p><span class="vai">www.4ata-leoni.ata-lucarelli.it →</span></a><a class="card" href="https://www.4ata-ornitorinco.ata-lucarelli.it" style="--c:#E8A01E"><img src="loghi/4ata-ornitorinco.png" alt="Logo della squadriglia Ornitorinco"><h3>Ornitorinco</h3><p class="membri">3 componenti</p><span class="vai">www.4ata-ornitorinco.ata-lucarelli.it →</span></a><a class="card" href="https://www.4ata-pantere.ata-lucarelli.it" style="--c:#E8A01E"><img src="loghi/4ata-pantere.png" alt="Logo della squadriglia Pantera"><h3>Pantera</h3><p class="membri">3 componenti</p><span class="vai">www.4ata-pantere.ata-lucarelli.it →</span></a></div>
+  </div>
+</section>
+<section id="5ata" style="--c:#E25A4C">
+  <div class="wrap">
+    <div class="testa"><span class="classe">5ATA</span><div><h2>Classe 5ATA</h2>
+    <p class="sotto">Anno del progetto di maturità · 6 squadriglie</p></div></div>
+    <div class="griglia"><a class="card" href="https://www.5ata-aquila.ata-lucarelli.it" style="--c:#E25A4C"><div class="segnaposto" style="--c:#E25A4C">A<small>logo da votare</small></div><h3>Aquila</h3><p class="prog">Spillatore automatico di birra</p><p class="membri">4 componenti</p><span class="vai">www.5ata-aquila.ata-lucarelli.it →</span></a><a class="card" href="https://www.5ata-canisciolti.ata-lucarelli.it" style="--c:#E25A4C"><div class="segnaposto" style="--c:#E25A4C">C<small>logo da votare</small></div><h3>Cani Sciolti</h3><p class="prog">Stazione di monitoraggio meteo</p><p class="membri">3 componenti</p><span class="vai">www.5ata-canisciolti.ata-lucarelli.it →</span></a><a class="card" href="https://www.5ata-leoni.ata-lucarelli.it" style="--c:#E25A4C"><div class="segnaposto" style="--c:#E25A4C">L<small>logo da votare</small></div><h3>Leoni</h3><p class="prog">Robot intelligente</p><p class="membri">5 componenti</p><span class="vai">www.5ata-leoni.ata-lucarelli.it →</span></a><a class="card" href="https://www.5ata-lupacchiotti.ata-lucarelli.it" style="--c:#E25A4C"><div class="segnaposto" style="--c:#E25A4C">L<small>logo da votare</small></div><h3>Lupacchiotti</h3><p class="prog">Sistema esoscheletro</p><p class="membri">5 componenti</p><span class="vai">www.5ata-lupacchiotti.ata-lucarelli.it →</span></a><a class="card" href="https://www.5ata-orsobruno.ata-lucarelli.it" style="--c:#E25A4C"><div class="segnaposto" style="--c:#E25A4C">O<small>logo da votare</small></div><h3>Orso Bruno</h3><p class="prog">Drone antincendio</p><p class="membri">1 componenti</p><span class="vai">www.5ata-orsobruno.ata-lucarelli.it →</span></a><a class="card" href="https://www.5ata-pulcinopio.ata-lucarelli.it" style="--c:#E25A4C"><div class="segnaposto" style="--c:#E25A4C">P<small>logo da votare</small></div><h3>Pulcino Pio</h3><p class="prog">Mano robotica</p><p class="membri">4 componenti</p><span class="vai">www.5ata-pulcinopio.ata-lucarelli.it →</span></a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Indirizzo Automazione · ITI "G. Bosco Lucarelli" di Benevento · www.ata-lucarelli.it</div>
+</footer>
+
+</body>
+</html>
